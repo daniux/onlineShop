@@ -32,9 +32,11 @@ public class CartController {
    	 modelAndView.addObject("cartId", customer.getCart().getId());
    	 return modelAndView;
     }
+
     
     @RequestMapping("/cart/getCart/{cartId}")
     public @ResponseBody Cart getCartItems(@PathVariable(value="cartId")int cartId){
    	 return cartService.getCartById(cartId);
     }
+
 }

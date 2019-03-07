@@ -27,7 +27,7 @@
             <a href="<c:url value="/getAllProducts" />">Product List</a>
         </p>
 
-        <p>Created by LaiOffer &copy; 2018</p>
+        <p>Designed in CA &copy; 2018</p>
     </div>
 
 </footer>

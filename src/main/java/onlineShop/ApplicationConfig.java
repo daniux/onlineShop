@@ -43,6 +43,7 @@ public class ApplicationConfig {
 		return dataSource;
 	}
 	
+	// used for upload images
     // Handler for multipart form data
     @Bean
     public MultipartResolver multipartResolver() {
@@ -51,7 +52,7 @@ public class ApplicationConfig {
    	 return multipartResolver;
     }
     
-    /* Old implementation, used Bean to process exception
+    /* Old implementation, use XML file will show exception, no longer need
     // Properly encode URL encoding for special characters.
     @Bean
     public HttpFirewall allowUrlEncodedSlashHttpFirewall() {

@@ -18,6 +18,7 @@ public class CustomerDaoImpl implements CustomerDao {
 	@Autowired
 	private SessionFactory sessionFactory;
 
+	@Override
 	public void addCustomer(Customer customer) {
 		customer.getUser().setEnabled(true);
 
@@ -39,6 +40,7 @@ public class CustomerDaoImpl implements CustomerDao {
 		}
 	}
 
+	@Override
 	public Customer getCustomerByUserName(String userName) {
 		User user = null;
 		try (Session session = sessionFactory.openSession()) {

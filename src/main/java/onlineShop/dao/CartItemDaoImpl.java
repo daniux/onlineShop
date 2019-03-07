@@ -20,7 +20,7 @@ public class CartItemDaoImpl implements CartItemDao {
 		try {
 			session = sessionFactory.openSession();
 			session.beginTransaction();
-			session.save(cartItem);
+			session.saveOrUpdate(cartItem);
 			session.getTransaction().commit();
 		} catch (Exception e) {
 			e.printStackTrace();

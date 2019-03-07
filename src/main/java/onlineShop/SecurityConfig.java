@@ -15,8 +15,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		http
 			.csrf().disable()
 			.formLogin()
-				.loginPage("/login")
-				
+			.loginPage("/login")
 			.and()
 			.authorizeRequests()
 			.antMatchers("/cart/**").hasAuthority("ROLE_USER")
@@ -25,13 +24,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.anyRequest().permitAll()
 			.and()
 			.logout()
-				.logoutUrl("/logout");
+			.logoutUrl("/logout");
 			
 	}
 	
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth
-			.inMemoryAuthentication().withUser("stefanlaioffer@gmail.com").password("1234").authorities("ROLE_ADMIN");
+			.inMemoryAuthentication().withUser("xxxxxx@gmail.com").password("1234").authorities("ROLE_ADMIN");
 		
 		auth
 			.jdbcAuthentication()

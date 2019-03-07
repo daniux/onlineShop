@@ -61,7 +61,8 @@ public class ProductDaoImpl implements ProductDao {
 		try {
 			session = sessionFactory.openSession();
 			session.beginTransaction();
-			session.saveOrUpdate(product);
+			session.update(product);
+			//session.saveOrUpdate(product);
 			session.getTransaction().commit();
 		} catch (Exception e) {
 			e.printStackTrace();

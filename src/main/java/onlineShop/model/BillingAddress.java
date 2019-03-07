@@ -1,4 +1,4 @@
-package onlineShop.model;
+ package onlineShop.model;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
